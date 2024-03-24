@@ -20,8 +20,8 @@ app.get("/", (req, res) => {
   res.send("Hello Geeks !!");
 });
 
-// app.use("/api/hoteldata" , importHotelDataRouter);
-// app.use("/api/categorydata" , importCategoriesToDbRouter);
+app.use("/api/hoteldata" , importHotelDataRouter);
+app.use("/api/categorydata" , importCategoriesToDbRouter);
 app.use("/api/hotels", hotelRouter);
 app.use("/api/categories" , categoryRouter);
 app.use("/api/hotels" , singleHotelRouter);
