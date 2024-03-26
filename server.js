@@ -8,11 +8,13 @@ const categoryRouter = require("./router/category");
 const singleHotelRouter = require("./router/singleHotelRouter");
 const authRouter = require("./router/authRouter");
 const wishlistRouter = require("./router/wishlistRouter");
+const cors = require("cors");
 
 const app = express();
 
-const PORT = 3500;
+const PORT = 3500; 
 
+app.use(cors());
 app.use(express.json());
 connectDB();
 
